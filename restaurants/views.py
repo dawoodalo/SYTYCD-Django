@@ -56,7 +56,7 @@ def restaurant_list(request):
             Q(owner__username__icontains=query)
         ).distinct()
     context = {
-       "rest_list": restaurants
+       "restaurants": restaurants
     }
     return render(request, 'list.html', context)
 
